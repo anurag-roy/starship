@@ -1,5 +1,84 @@
 # Changelog
 
+## [1.24.0](https://github.com/anurag-roy/starship/compare/v1.23.0...v1.24.0) (2025-04-23)
+
+
+### Features
+
+* add network namespace module ([#6449](https://github.com/anurag-roy/starship/issues/6449)) ([eb42f5a](https://github.com/anurag-roy/starship/commit/eb42f5ac7003da1f9543f5258dd674cec96a7320))
+* **battery:** Use best match instead of first match for `battery.display` threshold ([#6442](https://github.com/anurag-roy/starship/issues/6442)) ([2690a32](https://github.com/anurag-roy/starship/commit/2690a329cf9a6b4a160d024674193007fb292e1a))
+* **bun:** Detect bun using new text-format lockfile ([#6441](https://github.com/anurag-roy/starship/issues/6441)) ([2df521c](https://github.com/anurag-roy/starship/commit/2df521c69b0b1400edee7b7b332b5e2a900c7775))
+* **color:** add prev_fg and prev_bg as color specifiers based on the previous foreground/background colors respectively ([#6017](https://github.com/anurag-roy/starship/issues/6017)) ([9a3e87f](https://github.com/anurag-roy/starship/commit/9a3e87f2cbaa8ca4b8dea41f4f56ff297e94bb1a))
+* **color:** add prevfg,prevbg as color specifiers based on the previous foreground/background colors respectively ([9a3e87f](https://github.com/anurag-roy/starship/commit/9a3e87f2cbaa8ca4b8dea41f4f56ff297e94bb1a))
+* **completions:** Offer Nushell completions ([#6366](https://github.com/anurag-roy/starship/issues/6366)) ([df454d5](https://github.com/anurag-roy/starship/commit/df454d5a64fa6de5d2e334c5aa9b07150bf09ae6))
+* **deno:** add `deno.lock` file to default `detect_files` list ([#6310](https://github.com/anurag-roy/starship/issues/6310)) ([22c6c52](https://github.com/anurag-roy/starship/commit/22c6c5201d8fa682ad43501cf46427263a530c71))
+* **direnv:** allow direnv to detect environment variables ([#6196](https://github.com/anurag-roy/starship/issues/6196)) ([4593716](https://github.com/anurag-roy/starship/commit/45937166c8b3cb53f09b29c65d0f547aa7f2f022))
+* **gcloud:** Disabled gcloud module when active config hasn't been set ([#6039](https://github.com/anurag-roy/starship/issues/6039)) ([4d36d46](https://github.com/anurag-roy/starship/commit/4d36d463b91a245a62c357de308cad3cdec48edf))
+* **hostname:** add option to replace hostnames with aliases ([#6097](https://github.com/anurag-roy/starship/issues/6097)) ([68a8fc9](https://github.com/anurag-roy/starship/commit/68a8fc9563a52c4119241375d181ff68bb3d3da3))
+* **mojo:** add module for Mojo language ([#6108](https://github.com/anurag-roy/starship/issues/6108)) ([171746a](https://github.com/anurag-roy/starship/commit/171746a58408cbc0d48dedc52e21327bd35fccd4))
+* **nats:** Add NATS Context ([#5900](https://github.com/anurag-roy/starship/issues/5900)) ([5facd85](https://github.com/anurag-roy/starship/commit/5facd85da56d28e74878286923f148bc468f71c3))
+* **nodejs:** disable if bun project files detected ([#6346](https://github.com/anurag-roy/starship/issues/6346)) ([00ce705](https://github.com/anurag-roy/starship/commit/00ce7057efb7c431e7f9b526ca3ee941573e9f40))
+* **package:** support alternative gradle module version syntax ([#6079](https://github.com/anurag-roy/starship/issues/6079)) ([a62012e](https://github.com/anurag-roy/starship/commit/a62012e3280238b4c794bbe484b296af3b8fb53a))
+* **package:** support JSR package version ([#6502](https://github.com/anurag-roy/starship/issues/6502)) ([bd2321a](https://github.com/anurag-roy/starship/commit/bd2321a12fc47135f316e90f22ccab6a61b50730))
+* **purescript:** add support for spago-next configuration files ([#6036](https://github.com/anurag-roy/starship/issues/6036)) ([e028186](https://github.com/anurag-roy/starship/commit/e0281868c9d7801fc25f64f86ab8312d2a5a1794))
+* **python:** Add detect env vars option  ([#4486](https://github.com/anurag-roy/starship/issues/4486)) ([8a2d944](https://github.com/anurag-roy/starship/commit/8a2d944bc80a0a8358c30e639e8af51c1d45d973))
+* **python:** add support for `python_binary` arguments in config ([#6523](https://github.com/anurag-roy/starship/issues/6523)) ([7667555](https://github.com/anurag-roy/starship/commit/76675559c041fa2ae6a85cb946218e5e1f04bf75))
+* **python:** detect pixi and ipynb files ([#6228](https://github.com/anurag-roy/starship/issues/6228)) ([36134d8](https://github.com/anurag-roy/starship/commit/36134d896bda3c739ffd6555be62499716b0a9b0))
+* **release:** codesign windows release binaries ([#6273](https://github.com/anurag-roy/starship/issues/6273)) ([fcc697b](https://github.com/anurag-roy/starship/commit/fcc697b9b31aef44aefaf9a6660d51d44f707149))
+* **status:** add `{success,failure}_style` options ([#6269](https://github.com/anurag-roy/starship/issues/6269)) ([e21775c](https://github.com/anurag-roy/starship/commit/e21775c694a81cf092eafa3c9a7b169ae9c8ebf2))
+
+
+### Bug Fixes
+
+* **bash:** fix variable leak in Bash integration ([#6143](https://github.com/anurag-roy/starship/issues/6143)) ([e1189ed](https://github.com/anurag-roy/starship/commit/e1189ed7567de580d8f51c8baf870056a6060789))
+* **battery:** prefer charge ratio over current capacity ([#6603](https://github.com/anurag-roy/starship/issues/6603)) ([d245939](https://github.com/anurag-roy/starship/commit/d2459391194cf5a142d98b1297fe5f630c3415f5))
+* Change to a non-yanked version of the log crate ([#6495](https://github.com/anurag-roy/starship/issues/6495)) ([ed20b1d](https://github.com/anurag-roy/starship/commit/ed20b1d23b1b7ed914fca30fb6788f3d609f4a52))
+* **ci:** move to macos-latest image ([#6132](https://github.com/anurag-roy/starship/issues/6132)) ([c7a8ea7](https://github.com/anurag-roy/starship/commit/c7a8ea757033512b5723a39be71bdb91fdcfbdb1))
+* **cmd_duration:** Make render_time format more consistent ([#5825](https://github.com/anurag-roy/starship/issues/5825)) ([4abea6b](https://github.com/anurag-roy/starship/commit/4abea6b601c53adfa5719a7aac11069dc054cdf8))
+* **direnv:** replace nonexistent "orange" color with "bright-yellow" ([#5969](https://github.com/anurag-roy/starship/issues/5969)) ([478d5cc](https://github.com/anurag-roy/starship/commit/478d5cccb6f7f4622dd681756cf004ba92c98607))
+* **docker_context:** Ignore Docker Desktop "desktop-linux" context. ([#6314](https://github.com/anurag-roy/starship/issues/6314)) ([14babde](https://github.com/anurag-roy/starship/commit/14babde435f6307a8a28f9d323f0d66a319e9eab))
+* **docs:** correct username options ([#6084](https://github.com/anurag-roy/starship/issues/6084)) ([d96fbc5](https://github.com/anurag-roy/starship/commit/d96fbc5bcb9c039f875c4a55cff31edda57d5e6e))
+* **dotnet:** Remove duplicate v in dotnet version  ([#6060](https://github.com/anurag-roy/starship/issues/6060)) ([52a89a5](https://github.com/anurag-roy/starship/commit/52a89a515ed44d861ea556a0bb70d6901660a9b5))
+* **fish:** add missing arguments for fish transient prompt functions ([#6181](https://github.com/anurag-roy/starship/issues/6181)) ([d6814be](https://github.com/anurag-roy/starship/commit/d6814be0ba35dd52f6f0d0e1a3f14d5f106efd63)), closes [#6180](https://github.com/anurag-roy/starship/issues/6180)
+* **fish:** improve fish transient prompt ([#6107](https://github.com/anurag-roy/starship/issues/6107)) ([274dff3](https://github.com/anurag-roy/starship/commit/274dff37dbb375821a90d6976a11cf57d9386e4f))
+* **fish:** restore support for fish &lt;v3.4.0 ([#6337](https://github.com/anurag-roy/starship/issues/6337)) ([85d3fb2](https://github.com/anurag-roy/starship/commit/85d3fb2e2ab96e639fe6b67ba1afbb94b6c5b83e))
+* **fish:** use correct input function in transient execute ([#6265](https://github.com/anurag-roy/starship/issues/6265)) ([244c2c6](https://github.com/anurag-roy/starship/commit/244c2c629e1f358bf849923531d5cf0d69c2db2d))
+* Fixed "Click to download TOML" links ([#6234](https://github.com/anurag-roy/starship/issues/6234)) ([0200d75](https://github.com/anurag-roy/starship/commit/0200d75b3781977d5335e637858f4e0996ee0384))
+* **fossil_metrics:** Add -i flag to the fossil_metrics module's command ([#6544](https://github.com/anurag-roy/starship/issues/6544)) ([eb7d80b](https://github.com/anurag-roy/starship/commit/eb7d80bafac8f6ae719ee357aeff129065ddd7e6))
+* **git_status:** read proper name for core.fsmonitor flag ([#6173](https://github.com/anurag-roy/starship/issues/6173)) ([33b3b8e](https://github.com/anurag-roy/starship/commit/33b3b8e3986f6180a8f7b461a5a07fea702ec628))
+* handle variable bash $SHLVL behavior with explicit option ([#4912](https://github.com/anurag-roy/starship/issues/4912)) ([7ead2b5](https://github.com/anurag-roy/starship/commit/7ead2b55eb58a878dc3ea8d87204f84862bd8148))
+* **hostname:** use DNS instead of NetBIOS name on Windows ([#6343](https://github.com/anurag-roy/starship/issues/6343)) ([43f097e](https://github.com/anurag-roy/starship/commit/43f097eae838c1fba52659113826669802081918))
+* improve non-msvc windows support by bumping stable dependencies ([#5989](https://github.com/anurag-roy/starship/issues/5989)) ([50a6b84](https://github.com/anurag-roy/starship/commit/50a6b846045899c88d95b063a6b939a6dcb72a5c))
+* **init/pwsh:** preserve ViModeChangeHandler ([#6225](https://github.com/anurag-roy/starship/issues/6225)) ([9b6d394](https://github.com/anurag-roy/starship/commit/9b6d394e01d50db4395cfe402531bfd96c540462))
+* **init:** do not use cygpath for elvish ([#6376](https://github.com/anurag-roy/starship/issues/6376)) ([576aa14](https://github.com/anurag-roy/starship/commit/576aa14d15f57abf7d1c28e3486f2682e45c2f62))
+* **k8s:** don't trigger if scan config is set but env vars are not ([#5979](https://github.com/anurag-roy/starship/issues/5979)) ([8c75822](https://github.com/anurag-roy/starship/commit/8c75822d4380e020ebd289a4ef06cd4d31ee5196))
+* **package:** fix cargo workspace version ([#6626](https://github.com/anurag-roy/starship/issues/6626)) ([834bbf5](https://github.com/anurag-roy/starship/commit/834bbf53e53fc7f46f168e6d13677b737af73dbf))
+* **package:** support alternative gradle module version syntax ([#6080](https://github.com/anurag-roy/starship/issues/6080)) ([a62012e](https://github.com/anurag-roy/starship/commit/a62012e3280238b4c794bbe484b296af3b8fb53a))
+* **preset:** add missing rlang to plain-text-symbols preset ([ddafaa6](https://github.com/anurag-roy/starship/commit/ddafaa62fc85fddff2bc2cc3a1daaf919f8b8f0d))
+* **preset:** add missing rlang to plain-text-symbols preset ([#6458](https://github.com/anurag-roy/starship/issues/6458)) ([ddafaa6](https://github.com/anurag-roy/starship/commit/ddafaa62fc85fddff2bc2cc3a1daaf919f8b8f0d))
+* **preset:** fix typo in Open Policy Agent module format string ([#6118](https://github.com/anurag-roy/starship/issues/6118)) ([eba9748](https://github.com/anurag-roy/starship/commit/eba9748eb1bd9e1802d2a770eb0907cdb73292d6))
+* **python:** improve parsing of `pyvenv.cfg` files ([#6145](https://github.com/anurag-roy/starship/issues/6145)) ([7b65ad5](https://github.com/anurag-roy/starship/commit/7b65ad51635463003941ec0ecea1d4d315b2df53))
+* **scala:** use scala-cli first to avoid timeout ([2221a88](https://github.com/anurag-roy/starship/commit/2221a88f5ada124c657a265b878e37be47998766))
+* **status:** add trailing space to `pipestatus_format` ([#6404](https://github.com/anurag-roy/starship/issues/6404)) ([8a38b8f](https://github.com/anurag-roy/starship/commit/8a38b8f6f19fa6f17098e32f22183beac0498764))
+* use `whoami` for user/hostname queries again ([#6311](https://github.com/anurag-roy/starship/issues/6311)) ([77f0883](https://github.com/anurag-roy/starship/commit/77f08832d5228dff6c0e01ba4d4ad206c9d2362f))
+* **username:** avoid using `whoami` on android ([#6342](https://github.com/anurag-roy/starship/issues/6342)) ([af5d139](https://github.com/anurag-roy/starship/commit/af5d139060bbb60690196dc53e05424ac3c0fb5d)), closes [#6340](https://github.com/anurag-roy/starship/issues/6340)
+* **windows:** downgrade libz-ng-sys ([#6489](https://github.com/anurag-roy/starship/issues/6489)) ([6f7c67b](https://github.com/anurag-roy/starship/commit/6f7c67b4858b755c19754a2ec1063502545a16b6))
+
+
+### Performance Improvements
+
+* **ancestor-scan:** preallocate and reuse a single `PathBuf` ([#6387](https://github.com/anurag-roy/starship/issues/6387)) ([b3cb92e](https://github.com/anurag-roy/starship/commit/b3cb92e6483a6cc054c6f7db14951c99bd7c9e9b))
+* **fish:** Skip unnecessary indirection in starship init fish ([#6253](https://github.com/anurag-roy/starship/issues/6253)) ([798f640](https://github.com/anurag-roy/starship/commit/798f64033f5348793003ddd74fa0ce1c744c300b))
+* **k8s:** Improve performance of kubeconfig module ([#6032](https://github.com/anurag-roy/starship/issues/6032)) ([fae92b2](https://github.com/anurag-roy/starship/commit/fae92b29646f73bf1eb843fde80885c58480e85b))
+* **scala:** use scala-cli first to avoid timeout ([#5952](https://github.com/anurag-roy/starship/issues/5952)) ([2221a88](https://github.com/anurag-roy/starship/commit/2221a88f5ada124c657a265b878e37be47998766))
+* Skip unnecessary indirection in starship init fish ([798f640](https://github.com/anurag-roy/starship/commit/798f64033f5348793003ddd74fa0ce1c744c300b))
+
+
+### Reverts
+
+* "perf(fish): Skip unnecessary indirection in starship init fish" ([#6326](https://github.com/anurag-roy/starship/issues/6326)) ([00d927b](https://github.com/anurag-roy/starship/commit/00d927bb20e618b587635876d2e10047f98eff88))
+* Remove specialized whoami hostname function choice for windows ([#6651](https://github.com/anurag-roy/starship/issues/6651)) ([8eefdb2](https://github.com/anurag-roy/starship/commit/8eefdb21a6099d86b831ff1d42ae7f2a1678185a))
+
 ## [1.23.0](https://github.com/anurag-roy/starship/compare/v1.22.1...v1.23.0) (2025-04-06)
 
 
