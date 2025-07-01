@@ -720,16 +720,24 @@ pub fn render_time(raw_millis: u128, show_millis: bool) -> String {
     let components = [(days, "d"), (hours, "h"), (minutes, "m"), (seconds, "s")];
 
     // Concat components ito result starting from the first non-zero one
-    let result = components.iter().fold(
-        String::with_capacity(result_capacity),
-        |acc, (component, suffix)| match component {
-            0 if acc.is_empty() => acc,
-            n => acc + &n.to_string() + suffix,
-        },
-    );
+    let result = components
+        .iter()
+        .fold(
+            String::with_capacity(result_capacity),
+            |acc, (component, suffix)| match component {
+                0 if acc.is_empty() => acc,
+                n => acc + &n.to_string() + suffix + " ",
+            },
+        )
+        .trim_end()
+        .to_string();
 
     if show_millis {
-        result + &millis.to_string() + "ms"
+        if result.is_empty() {
+            millis.to_string() + "ms"
+        } else {
+            result + " " + &millis.to_string() + "ms"
+        }
     } else {
         result
     }
@@ -804,19 +812,19 @@ mod tests {
     }
     #[test]
     fn render_time_test_10s() {
-        assert_eq!(render_time(10_000_u128, true), "10s0ms");
+        assert_eq!(render_time(10_000_u128, true), "10s 0ms")
     }
     #[test]
     fn render_time_test_90s() {
-        assert_eq!(render_time(90_000_u128, true), "1m30s0ms");
+        assert_eq!(render_time(90_000_u128, true), "1m 30s 0ms")
     }
     #[test]
     fn render_time_test_10110s() {
-        assert_eq!(render_time(10_110_000_u128, true), "2h48m30s0ms");
+        assert_eq!(render_time(10_110_000_u128, true), "2h 48m 30s 0ms")
     }
     #[test]
     fn render_time_test_1d() {
-        assert_eq!(render_time(86_400_000_u128, false), "1d0h0m0s");
+        assert_eq!(render_time(86_400_000_u128, false), "1d 0h 0m 0s")
     }
 
     #[test]
